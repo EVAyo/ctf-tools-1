@@ -6,83 +6,89 @@ The install-scripts for these tools are checked every once in a while, so things
 
 Installers for the following tools are included:
 
-| Category | Source | Tool | Description |
-|----------|--------|------|-------------|
-| binary | Directory | [angr](http://angr.io) | Next-generation binary analysis engine from Shellphish. | <!--tool-->
-| binary | Directory | [angr-management](http://angr.io) | A GUI reverse engineering and decompilation tool. | <!--tool-->
-| binary | Directory | [crosstool-ng](http://crosstool-ng.org/) | Cross-compilers and cross-architecture tools. | <!--tool--><!--no-test-->
-| binary | Directory | [cross2](http://kozos.jp/books/asm/asm.html) | A set of cross-compilation tools from a Japanese book on C. | <!--tool--><!--no-test-->
-| binary | Directory | [decomp2dbg](https://github.com/mahaloz/decomp2dbg) |  A plugin to introduce interactive symbols into your debugger from your decompiler. | <!--tool-->
-| binary | Directory | [elfkickers](http://www.muppetlabs.com/~breadbox/software/elfkickers.html) | A set of utilities for working with ELF files. | <!--tool--><!--test-->
-| binary | Directory | [elfparser](https://github.com/mentebinaria/elfparser-ng) | Multiplatform CLI and GUI tool to show information about ELF files. | <!--tool--><!--test-->
-| binary | Directory | [evilize](http://www.mathstat.dal.ca/~selinger/md5collision/) | Tool to create MD5 colliding binaries | <!--tool--><!--test-->
-| binary | Directory | [gdb](http://www.gnu.org/software/gdb/) | Up-to-date gdb with python2 bindings. | <!--tool--><!--failing-->
-| binary | Directory | [gef](https://github.com/hugsy/gef) | Enhanced environment for gdb. | <!--tool--><!--no-test-->
-| binary | Directory | [hongfuzz](https://github.com/google/honggfuzz) | A general-purpose, easy-to-use fuzzer with interesting analysis options. | <!--tool--><!--test-->
-| binary | Directory | [one_gadget](https://github.com/david942j/one_gadget) | Magic gadget search for libc. | <!--tool--> <!--test-->
-| binary | Directory | [preeny](https://github.com/zardus/preeny) | A collection of helpful preloads (compiled for many architectures!). | <!--tool--><!--no-test-->
-| binary | Directory | [pwndbg](https://github.com/pwndbg/pwndbg) | Enhanced environment for gdb. Especially for pwning. | <!--tool--><!--no-test-->
-| binary | Directory | [pwnsh](https://github.com/zardus/pwnsh) | Useful shell scripts for assembly, exploitation, etc. | <!--tool-->
-| binary | Directory | [pwntools](https://github.com/Gallopsled/pwntools) | Useful CTF utilities. | <!--tool--><!--no-test-->
-| binary | Directory | [qemu](http://qemu.org) | Latest version of qemu! | <!--tool--><!--times-out-->
-| binary | Directory | [qira](http://qira.me) | Parallel, timeless debugger. | <!--tool--><!--times-out-->
-| binary | Directory | [rappel](https://github.com/yrp604/rappel) | A linux-based assembly REPL. | <!--tool--><!--test-->
-| binary | Directory | [ropper](https://github.com/sashs/Ropper) | Another gadget finder. | <!--tool--><!--test-->
-| binary | Directory | [rp++](https://github.com/0vercl0k/rp) | Another gadget finder. | <!--tool--><!--test-->
-| binary | Directory | [seccomp-tools](https://github.com/david942j/seccomp-tools) | Provides powerful tools for seccomp analysis | <!--tool--><!--test-->
-| binary | Directory | [shellnoob](https://github.com/reyammer/shellnoob) | Shellcode writing helper. | <!--tool--><!--test-->
-| binary | Directory | [taintgrind](https://github.com/wmkhoo/taintgrind) | A valgrind taint analysis tool. | <!--tool--><!--failing-->
-| binary | Directory | [valgrind](http://valgrind.org) | A Dynamic Binary Instrumentation framework with some built-in tools. | <!--tool--><!--test-->
-| binary | Directory | [villoc](https://github.com/wapiflapi/villoc) | Visualization of heap operations. | <!--tool--><!--test-->
-| binary | Directory | [xrop](https://github.com/acama/xrop) | Gadget finder. | <!--tool--><!--failing-->
-| binary | Directory | [manticore](https://github.com/trailofbits/manticore) | Manticore is a prototyping tool for dynamic binary analysis, with support for symbolic execution, taint analysis, and binary instrumentation. | <!--tool--><!--no-test-->
-| forensics | Directory | [firmware-mod-kit](https://code.google.com/p/firmware-mod-kit/) | Tools for firmware packing/unpacking. | <!--tool--><!--test-->
-| forensics | Directory | [pdf-parser](http://blog.didierstevens.com/programs/pdf-tools/) | Tool for digging in PDF files | <!--tool--><!--test-->
-| forensics | Directory | [peepdf](https://github.com/cert-ee/peepdf) | Powerful Python tool to analyze PDF documents. | <!--tool--><!--test-->
-| forensics | Directory | [scrdec](https://gist.github.com/bcse/1834878) | A decoder for encoded Windows Scripts. | <!--tool--><!--test-->
-| crypto | Directory | [codext](https://github.com/dhondta/python-codext) | Python codecs extension featuring CLI tools for encoding/decoding anything including AI-based guessing mode. | <!--tool--><!--test-->
-| crypto | Directory | [cribdrag](https://github.com/SpiderLabs/cribdrag) | Interactive crib dragging tool (for crypto). | <!--tool--><!--test-->
-| crypto | Directory | [fastcoll](https://www.win.tue.nl/hashclash/) | An md5sum collision generator. | <!--tool--><!--test-->
-| crypto | Directory | [foresight](https://github.com/ALSchwalm/foresight) | A tool for predicting the output of random number generators. To run, launch "foresee". | <!--tool--><!--test-->
-| crypto | Directory | [featherduster](https://github.com/nccgroup/featherduster) |  An automated, modular cryptanalysis tool. WARNING: needs python2 (which can be installed with ctf-tools). | <!--tool--><!--no-test-->
-| crypto | Directory | [galois](http://web.eecs.utk.edu/~plank/plank/papers/CS-07-593) | A fast galois field arithmetic library/toolkit. | <!--tool--><!--test-->
-| crypto | Directory | [hashpump-partialhash](https://github.com/mheistermann/HashPump-partialhash) | Hashpump, supporting partially-unknown hashes. | <!--tool--><!--test-->
-| crypto | Directory | [hash-identifier](https://code.google.com/p/hash-identifier/source/checkout) | Simple hash algorithm identifier. | <!--tool--><!--test-->
-| crypto | Directory | [libc-database](https://github.com/niklasb/libc-database) | Build a database of libc offsets to simplify exploitation. | <!--tool--><!--test-->
-| crypto | Directory | [msieve](http://sourceforge.net/projects/msieve/) | Msieve is a C library implementing a suite of algorithms to factor large integers. | <!--tool--><!--test-->
-| crypto | Directory | [nonce-disrespect](https://github.com/nonce-disrespect/nonce-disrespect) | Nonce-Disrespecting Adversaries: Practical Forgery Attacks on GCM in TLS. | <!--tool--><!--test-->
-| crypto | Directory | [pemcrack](https://github.com/robertdavidgraham/pemcrack) | SSL PEM file cracker. | <!--tool--><!--test-->
-| crypto | Directory | [pkcrack](https://www.unix-ag.uni-kl.de/~conrad/krypto/pkcrack.html) | PkZip encryption cracker. | <!--tool--><!--test-->
-| crypto | Directory | [reveng](http://reveng.sourceforge.net/) | CRC finder. | <!--tool--><!--test-->
-| crypto | Directory | [ssh_decoder](https://github.com/jjyg/ssh_decoder) | A tool for decoding ssh traffic. You will need `ruby1.8` from `https://launchpad.net/~brightbox/+archive/ubuntu/ruby-ng` to run this. Run with `ssh_decoder --help` for help, as running it with no arguments causes it to crash. | <!--tool--><!--test-->
-| crypto | Directory | [sslsplit](https://github.com/droe/sslsplit) | SSL/TLS MITM. | <!--tool--><!--test-->
-| crypto | Directory | [xortool](https://github.com/hellman/xortool) | XOR analysis tool. | <!--tool--><!--test-->
-| crypto | Directory | [yafu](http://sourceforge.net/projects/yafu/) | Automated integer factorization. | <!--tool--><!--test-->
-| web | Directory | [burpsuite](http://portswigger.net/burp) | Web proxy to do naughty web stuff. | <!--tool--><!--failing-->
-| web | Directory | [commix](https://github.com/stasinopoulos/commix) | Command injection and exploitation tool. | <!--tool--><!--test-->
-| web | Directory | [mitmproxy](https://mitmproxy.org/) | CLI Web proxy and python library.  | <!--tool--><!--no-test-->
-| web | Directory | [subbrute](https://github.com/TheRook/subbrute) | A DNS meta-query spider that enumerates DNS records, and subdomains. | <!--tool--><!--test-->
-| web | Directory | [webgrep](https://github.com/dhondta/webgrep) | `grep` for Web pages, with JS deobfuscation, CSS unminifying and OCR on images. | <!--tool--><!--test-->
-| stego | Directory | [steganabara](http://www.caesum.com/handbook/stego.htm) | Another image stenography solver. | <!--tool--><!--test-->
-| stego | Directory | [stegano-tools](https://github.com/dhondta/stegano-tools) | A collection of text and image steganography tools (incl LSB, PVD, PIT). | <!--tool--><!--test-->
-| stego | Directory | [stegdetect](http://www.outguess.org/) | Stenography detection/breaking tool. | <!--tool--><!--test-->
-| stego | Directory | [stegsolve](http://www.caesum.com/handbook/stego.htm) | Image stenography solver. | <!--tool--><!--test-->
-| stego | Directory | [stegosaurus](https://github.com/AngelKitty/stegosaurus) | A steganography tool for embedding arbitrary payloads in Python bytecode (pyc or pyo) files. | <!--tool--><!--no-test-->
-| stego | Directory | [zsteg](https://github.com/zed-0xff/zsteg) | detect stegano-hidden data in PNG & BMP. | <!--tool--><!--no-test-->
-| misc | Directory | [xspy](https://gitlab.com/kalilinux/packages/xspy) | Tiny tool to spy on X sessions. | <!--tool--><!--test-->
-| misc | Directory | [jdgui](http://jd.benow.ca/) | Java decompiler. | <!--tool--><!--test-->
-| misc | Directory | [veles](https://codisec.com/veles/) | Binary data analysis and visualization tool. | <!--tool--><!--test-->
-| misc | Directory | [python2](https://www.python.org/downloads/release/python-2718/) | For when you really need it... | <!--tool--><!--test-->
+| Category | Tool | Description |
+|----------|------|-------------|
+| binary | [angr](http://angr.io) | ![Last Build](https://img.shields.io/docker/v/ctftools/angr?label=built) Next-generation binary analysis engine from Shellphish. | <!--tool-->
+| binary | [angr-management](http://angr.io) | ![Last Build](https://img.shields.io/docker/v/ctftools/angr-management?label=built) A GUI reverse engineering and decompilation tool. | <!--tool-->
+| binary | [beef](https://github.com/beefproject/beef) | ![Last Build](https://img.shields.io/docker/v/ctftools/beef?label=built) Browser exploitation framework. | <!--tool-->
+| binary | [crosstool](http://crosstool-ng.org/) | ![Last Build](https://img.shields.io/docker/v/ctftools/crosstool?label=built) Cross-compilers and cross-architecture tools. | <!--tool--><!--no-test-->
+| binary | [cross2](http://kozos.jp/books/asm/asm.html) | ![Last Build](https://img.shields.io/docker/v/ctftools/cross2?label=built) A set of cross-compilation tools from a Japanese book on C. | <!--tool--><!--no-test-->
+| binary | [decomp2dbg](https://github.com/mahaloz/decomp2dbg) | ![Last Build](https://img.shields.io/docker/v/ctftools/decomp2dbg?label=built)  A plugin to introduce interactive symbols into your debugger from your decompiler. | <!--tool-->
+| binary | [elfkickers](http://www.muppetlabs.com/~breadbox/software/elfkickers.html) | ![Last Build](https://img.shields.io/docker/v/ctftools/elfkickers?label=built) A set of utilities for working with ELF files. | <!--tool-->
+| binary | [elfparser](https://github.com/mentebinaria/elfparser-ng) | ![Last Build](https://img.shields.io/docker/v/ctftools/elfparser?label=built) Multiplatform CLI and GUI tool to show information about ELF files. | <!--tool-->
+| binary | [evilize](http://www.mathstat.dal.ca/~selinger/md5collision/) | ![Last Build](https://img.shields.io/docker/v/ctftools/evilize?label=built) Tool to create MD5 colliding binaries | <!--tool-->
+| binary | [gdb](http://www.gnu.org/software/gdb/) | ![Last Build](https://img.shields.io/docker/v/ctftools/gdb?label=built) Up-to-date gdb with python2 bindings. | <!--tool--><!--slow-test-->
+| binary | [gef](https://github.com/hugsy/gef) | ![Last Build](https://img.shields.io/docker/v/ctftools/gef?label=built) Enhanced environment for gdb. | <!--tool-->
+| binary | [ghidra](https://ghidra-sre.org/) | ![Last Build](https://img.shields.io/docker/v/ctftools/ghidra?label=built) Open-source reverse engineering and decompilation tool. | <!--tool-->
+| binary | [honggfuzz](https://github.com/google/honggfuzz) | ![Last Build](https://img.shields.io/docker/v/ctftools/honggfuzz?label=built) A general-purpose, easy-to-use fuzzer with interesting analysis options. | <!--tool-->
+| binary | [IDA Free](https://hex-rays.com/ida-free) | Decompilation and reversing tool (requires you to download it to ~/Downloads on your own!). | <!--tool--><!--no-test-->
+| binary | [manticore](https://github.com/trailofbits/manticore) | ![Last Build](https://img.shields.io/docker/v/ctftools/manticore?label=built) Manticore is a prototyping tool for dynamic binary analysis, with support for symbolic execution, taint analysis, and binary instrumentation. | <!--tool-->
+| binary | [one_gadget](https://github.com/david942j/one_gadget) | ![Last Build](https://img.shields.io/docker/v/ctftools/one_gadget?label=built) Magic gadget search for libc. | <!--tool--> 
+| binary | [preeny](https://github.com/zardus/preeny) | ![Last Build](https://img.shields.io/docker/v/ctftools/preeny?label=built) A collection of helpful preloads (compiled for many architectures!). | <!--tool-->
+| binary | [pwninit](https://github.com/io12/pwninit) | ![Last Build](https://img.shields.io/docker/v/ctftools/pwninit?label=built) Script to automate starting pwning challenges. | <!--tool-->
+| binary | [pwndbg](https://github.com/pwndbg/pwndbg) | ![Last Build](https://img.shields.io/docker/v/ctftools/pwndbg?label=built) Enhanced environment for gdb. Especially for pwning. | <!--tool-->
+| binary | [pwnsh](https://github.com/zardus/pwnsh) | ![Last Build](https://img.shields.io/docker/v/ctftools/pwnsh?label=built) Useful shell scripts for assembly, exploitation, etc. | <!--tool-->
+| binary | [pwntools](https://github.com/Gallopsled/pwntools) | ![Last Build](https://img.shields.io/docker/v/ctftools/pwntools?label=built) Useful CTF utilities. | <!--tool-->
+| binary | [qemu](http://qemu.org) | ![Last Build](https://img.shields.io/docker/v/ctftools/qemu?label=built) Latest version of qemu! | <!--tool--><!--slow-test-->
+| binary | [qiling](https://github.com/qilingframework/qiling) | ![Last Build](https://img.shields.io/docker/v/ctftools/qiling?label=built) A dynamic binary instrumentation framework. | <!--tool-->
+| binary | [qira](http://qira.me) | ![Last Build](https://img.shields.io/docker/v/ctftools/qira?label=built) Parallel, timeless debugger. | <!--tool--><!--slow-test-->
+| binary | [rappel](https://github.com/yrp604/rappel) | ![Last Build](https://img.shields.io/docker/v/ctftools/rappel?label=built) A linux-based assembly REPL. | <!--tool-->
+| binary | [ropper](https://github.com/sashs/Ropper) | ![Last Build](https://img.shields.io/docker/v/ctftools/ropper?label=built) Another gadget finder. | <!--tool-->
+| binary | [rp++](https://github.com/0vercl0k/rp) | ![Last Build](https://img.shields.io/docker/v/ctftools/rp?label=built) Another gadget finder. | <!--tool-->
+| binary | [seccomp-tools](https://github.com/david942j/seccomp-tools) | ![Last Build](https://img.shields.io/docker/v/ctftools/seccomp-tools?label=built) Provides powerful tools for seccomp analysis | <!--tool-->
+| binary | [shellnoob](https://github.com/reyammer/shellnoob) | ![Last Build](https://img.shields.io/docker/v/ctftools/shellnoob?label=built) Shellcode writing helper. | <!--tool-->
+| binary | [taintgrind](https://github.com/wmkhoo/taintgrind) | ![Last Build](https://img.shields.io/docker/v/ctftools/taintgrind?label=built) A valgrind taint analysis tool. | <!--tool--><!--failing-->
+| binary | [valgrind](http://valgrind.org) | ![Last Build](https://img.shields.io/docker/v/ctftools/valgrind?label=built) A Dynamic Binary Instrumentation framework with some built-in tools. | <!--tool-->
+| binary | [villoc](https://github.com/wapiflapi/villoc) | ![Last Build](https://img.shields.io/docker/v/ctftools/villoc?label=built) Visualization of heap operations. | <!--tool-->
+| binary | [xrop](https://github.com/acama/xrop) | ![Last Build](https://img.shields.io/docker/v/ctftools/xrop?label=built) Gadget finder. | <!--tool--><!--failing-->
+| forensics | [firmware-mod-kit](https://code.google.com/p/firmware-mod-kit/) | ![Last Build](https://img.shields.io/docker/v/ctftools/firmware-mod-kit?label=built) Tools for firmware packing/unpacking. | <!--tool-->
+| forensics | [pdf-parser](http://blog.didierstevens.com/programs/pdf-tools/) | ![Last Build](https://img.shields.io/docker/v/ctftools/pdf-parser?label=built) Tool for digging in PDF files | <!--tool-->
+| forensics | [peepdf](https://github.com/cert-ee/peepdf) | ![Last Build](https://img.shields.io/docker/v/ctftools/peepdf?label=built) Powerful Python tool to analyze PDF documents. | <!--tool-->
+| forensics | [scrdec18](https://gist.github.com/bcse/1834878) | ![Last Build](https://img.shields.io/docker/v/ctftools/scrdec18?label=built) A decoder for encoded Windows Scripts. | <!--tool-->
+| forensics | [volatility](https://github.com/volatilityfoundation/volatility) | ![Last Build](https://img.shields.io/docker/v/ctftools/volatility?label=built) Analyzer for system memory dumps (classic python2 version; requires python2 tool). | <!--tool-->
+| forensics | [volatility3](https://github.com/volatilityfoundation/volatility3) | ![Last Build](https://img.shields.io/docker/v/ctftools/volatility3?label=built) Analyzer for system memory dumps (latest version). | <!--tool-->
+| crypto | [codext](https://github.com/dhondta/python-codext) | ![Last Build](https://img.shields.io/docker/v/ctftools/codext?label=built) Python codecs extension featuring CLI tools for encoding/decoding anything including AI-based guessing mode. | <!--tool-->
+| crypto | [cribdrag](https://github.com/SpiderLabs/cribdrag) | ![Last Build](https://img.shields.io/docker/v/ctftools/cribdrag?label=built) Interactive crib dragging tool (for crypto). | <!--tool-->
+| crypto | [fastcoll](https://www.win.tue.nl/hashclash/) | ![Last Build](https://img.shields.io/docker/v/ctftools/fastcoll?label=built) An md5sum collision generator. | <!--tool-->
+| crypto | [foresight](https://github.com/ALSchwalm/foresight) | ![Last Build](https://img.shields.io/docker/v/ctftools/foresight?label=built) A tool for predicting the output of random number generators. To run, launch "foresee". | <!--tool-->
+| crypto | [featherduster](https://github.com/nccgroup/featherduster) | ![Last Build](https://img.shields.io/docker/v/ctftools/featherduster?label=built)  An automated, modular cryptanalysis tool. WARNING: needs python2 (which can be installed with ctf-tools). | <!--tool-->
+| crypto | [galois](http://web.eecs.utk.edu/~plank/plank/papers/CS-07-593) | ![Last Build](https://img.shields.io/docker/v/ctftools/galois?label=built) A fast galois field arithmetic library/toolkit. | <!--tool-->
+| crypto | [hashpump-partialhash](https://github.com/mheistermann/HashPump-partialhash) | ![Last Build](https://img.shields.io/docker/v/ctftools/hashpump-partialhash?label=built) Hashpump, supporting partially-unknown hashes. | <!--tool-->
+| crypto | [hash-identifier](https://code.google.com/p/hash-identifier/source/checkout) | ![Last Build](https://img.shields.io/docker/v/ctftools/hash-identifier?label=built) Simple hash algorithm identifier. | <!--tool-->
+| crypto | [libc-database](https://github.com/niklasb/libc-database) | ![Last Build](https://img.shields.io/docker/v/ctftools/libc-database?label=built) Build a database of libc offsets to simplify exploitation. | <!--tool--><!--slow-test-->
+| crypto | [msieve](http://sourceforge.net/projects/msieve/) | ![Last Build](https://img.shields.io/docker/v/ctftools/msieve?label=built) Msieve is a C library implementing a suite of algorithms to factor large integers. | <!--tool-->
+| crypto | [nonce-disrespect](https://github.com/nonce-disrespect/nonce-disrespect) | ![Last Build](https://img.shields.io/docker/v/ctftools/nonce-disrespect?label=built) Nonce-Disrespecting Adversaries: Practical Forgery Attacks on GCM in TLS. | <!--tool-->
+| crypto | [pemcrack](https://github.com/robertdavidgraham/pemcrack) | ![Last Build](https://img.shields.io/docker/v/ctftools/pemcrack?label=built) SSL PEM file cracker. | <!--tool-->
+| crypto | [pkcrack](https://www.unix-ag.uni-kl.de/~conrad/krypto/pkcrack.html) | ![Last Build](https://img.shields.io/docker/v/ctftools/pkcrack?label=built) PkZip encryption cracker. | <!--tool-->
+| crypto | [reveng](http://reveng.sourceforge.net/) | ![Last Build](https://img.shields.io/docker/v/ctftools/reveng?label=built) CRC finder. | <!--tool-->
+| crypto | [rsactftool](https://github.com/RsaCtfTool/RsaCtfTool) | ![Last Build](https://img.shields.io/docker/v/ctftools/rsactftool?label=built) RSA attack tool. | <!--tool-->
+| crypto | [ssh_decoder](https://github.com/jjyg/ssh_decoder) | ![Last Build](https://img.shields.io/docker/v/ctftools/ssh_decoder?label=built) A tool for decoding ssh traffic. You will need `ruby1.8` from `https://launchpad.net/~brightbox/+archive/ubuntu/ruby-ng` to run this. Run with `ssh_decoder --help` for help, as running it with no arguments causes it to crash. | <!--tool-->
+| crypto | [sslsplit](https://github.com/droe/sslsplit) | ![Last Build](https://img.shields.io/docker/v/ctftools/sslsplit?label=built) SSL/TLS MITM. | <!--tool-->
+| crypto | [xortool](https://github.com/hellman/xortool) | ![Last Build](https://img.shields.io/docker/v/ctftools/xortool?label=built) XOR analysis tool. | <!--tool-->
+| crypto | [yafu](http://sourceforge.net/projects/yafu/) | ![Last Build](https://img.shields.io/docker/v/ctftools/yafu?label=built) Automated integer factorization. | <!--tool-->
+| web | [burpsuite](http://portswigger.net/burp) | ![Last Build](https://img.shields.io/docker/v/ctftools/burpsuite?label=built) Web proxy to do naughty web stuff. | <!--tool--><!--failing-->
+| web | [commix](https://github.com/stasinopoulos/commix) | ![Last Build](https://img.shields.io/docker/v/ctftools/commix?label=built) Command injection and exploitation tool. | <!--tool-->
+| web | [mitmproxy](https://mitmproxy.org/) | ![Last Build](https://img.shields.io/docker/v/ctftools/mitmproxy?label=built) CLI Web proxy and python library.  | <!--tool-->
+| web | [subbrute](https://github.com/TheRook/subbrute) | ![Last Build](https://img.shields.io/docker/v/ctftools/subbrute?label=built) A DNS meta-query spider that enumerates DNS records, and subdomains. | <!--tool-->
+| web | [webgrep](https://github.com/dhondta/webgrep) | ![Last Build](https://img.shields.io/docker/v/ctftools/webgrep?label=built) `grep` for Web pages, with JS deobfuscation, CSS unminifying and OCR on images. | <!--tool-->
+| stego | [steganabara](http://www.caesum.com/handbook/stego.htm) | ![Last Build](https://img.shields.io/docker/v/ctftools/steganabara?label=built) Another image stenography solver. | <!--tool-->
+| stego | [stegano-tools](https://github.com/dhondta/stegano-tools) | ![Last Build](https://img.shields.io/docker/v/ctftools/stegano-tools?label=built) A collection of text and image steganography tools (incl LSB, PVD, PIT). | <!--tool-->
+| stego | [stegdetect](http://www.outguess.org/) | ![Last Build](https://img.shields.io/docker/v/ctftools/stegdetect?label=built) Stenography detection/breaking tool. | <!--tool-->
+| stego | [stegsolve](http://www.caesum.com/handbook/stego.htm) | ![Last Build](https://img.shields.io/docker/v/ctftools/stegsolve?label=built) Image stenography solver. | <!--tool-->
+| stego | [stegosaurus](https://github.com/AngelKitty/stegosaurus) | ![Last Build](https://img.shields.io/docker/v/ctftools/stegosaurus?label=built) A steganography tool for embedding arbitrary payloads in Python bytecode (pyc or pyo) files. | <!--tool-->
+| stego | [zsteg](https://github.com/zed-0xff/zsteg) | ![Last Build](https://img.shields.io/docker/v/ctftools/zsteg?label=built) detect stegano-hidden data in PNG & BMP. | <!--tool-->
+| misc | [jdgui](http://jd.benow.ca/) | ![Last Build](https://img.shields.io/docker/v/ctftools/jdgui?label=built) Java decompiler. | <!--tool-->
+| misc | [python2](https://www.python.org/downloads/release/python-2718/) | ![Last Build](https://img.shields.io/docker/v/ctftools/python2?label=built) For when you really need it... | <!--tool-->
+| misc | [social-analyzer](https://github.com/qeeqbox/social-analyzer) | ![Last Build](https://img.shields.io/docker/v/ctftools/social-analyzer?label=built) Social media reconnaisance tool... | <!--tool-->
+| misc | [veles](https://codisec.com/veles/) | ![Last Build](https://img.shields.io/docker/v/ctftools/veles?label=built) Binary data analysis and visualization tool. | <!--tool-->
+| misc | [xspy](https://gitlab.com/kalilinux/packages/xspy) | ![Last Build](https://img.shields.io/docker/v/ctftools/xspy?label=built) Tiny tool to spy on X sessions. | <!--tool-->
 
 There are also some installers for non-CTF stuff to break the monotony!
 
 | Category | Tool | Description |
 |----------|------|-------------|
-| C magic | [C-bind](https://github.com/zwimer/C-bind) | A library used to enable function binding in C! |
-| game | [Dwarf Fortress](http://www.bay12games.com/dwarves/) | Something to help you relax after a CTF! |
-| library collection | [single\_file\_libs](https://github.com/nothings/single_file_libs) | A large collection of useful single file include libraries written for C/C++ |
-| dolphin | [sudolphin](https://sudolph.in/) | If your friend ever leaves their laptop unlocked, `curl -sSL sh.sudolph.in \| sh` then wait and see! |
-| tor-browser | [tor-browser](https://www.torproject.org/projects/torbrowser.html.en) | Useful when you need to hit a web challenge from different IPs. |
+| game | [df](http://www.bay12games.com/dwarves/) | ![Last Build](https://img.shields.io/docker/v/ctftools/df?label=built) Dwarf Fortress! Something to help you relax after a CTF! | <!--tool-->
+| web | [tor-browser](https://www.torproject.org/projects/torbrowser.html.en) | ![Last Build](https://img.shields.io/docker/v/ctftools/tor-browser?label=built) Useful when you need to hit a web challenge from different IPs. | <!--tool-->
 
 ## Usage
 
@@ -123,7 +129,7 @@ If you want to add other packages to this environment, look under the `ctf-tools
 ## Help!
 
 Something not working?
-I didn't write (almost) any of these tools, but hit up [#ctf-tools on freenode](http://webchat.freenode.net/?channels=#ctf-tools) if you're desperate.
+I didn't write (almost) any of these tools, but hit up [the discord](https://discord.gg/KRcjyn4pBH) if you're desperate.
 Maybe some kind soul will help!
 
 ## Dockerized Tools
@@ -166,10 +172,8 @@ The built image will have ctf-tools cloned and ready to go and your tool install
 
 ## Kali Linux
 
-Kali Linux (Sana and Rolling), due to manually setting certain libraries to not use the latest version available (sometimes being out of date by years) causes some tools to not install at all, or fail in strange ways. AFL and Panda comes to mind, in fact any tool that uses QEMU 2.30 will probably fail during compilation under Kali.
-Overriding these libraries breaks other tools included in Kali so your only solution is to either live with some of Kali's tools being broken, or running another distribution separately such as Ubuntu.
-
-Most tools aren't affected though.
+Kali Linux (Sana and Rolling), due to manually setting certain libraries to not use the latest version available (sometimes being out of date by years) causes some tools to not install at all, or fail in strange ways.
+Overriding these libraries breaks other tools included in Kali so your only solution is to either live with some of Kali's tools being broken, use docker, or running another distribution separately such as Ubuntu.
 
 ## Adding Tools
 
@@ -177,7 +181,8 @@ To add a tool (say, named *toolname*), do the following:
 
 1. Create a `toolname` directory.
 2. Create an `install` script.
-3. (optional) if special uninstall steps are required, create an `uninstall` script.
+3. Add it to the readme.
+4. (optional) if special uninstall steps are required, create an `uninstall` script.
 
 ### Install Scripts
 
